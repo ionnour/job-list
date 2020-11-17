@@ -1,0 +1,43 @@
+.header {
+  background-color: #5aacac;
+  background-size: cover;
+  height: 150px;
+  width: 100%;
+}
+
+.body {
+  transition: all 1s;
+  background: $bg;
+  font-family: $font-1;
+  min-height: 100vh;
+  padding: 6rem 10rem;
+}
+
+.header h1 {
+  margin: auto;
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 4rem;
+  font-family: $font-1;
+  color: $secondary-cyan;
+}
+
+.cardList {
+  margin-top: -80px;
+}
+
+@include tdq() {
+  .body {
+    padding: 4rem 2rem;
+  }
+
+  .cardList {
+    margin-top: -65px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .body {
+    padding: 4rem 0.5rem;
+  }
+}

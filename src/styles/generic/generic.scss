@@ -1,0 +1,53 @@
+@import url("https://unpkg.com/@aman-atg/normal.css");
+html {
+  box-sizing: border-box;
+  font-size: $font-size;
+}
+
+body {
+  font-size: inherit;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+@mixin no-gutter($lh: 0) {
+  margin: 0;
+  padding: 0;
+  line-height: $lh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  background: white;
+  border: none;
+}
+
+// Layout
+
+@mixin flex-centered($a: 1, $j: 1) {
+  display: flex;
+  @if ($a==1) {
+    align-items: center;
+  }
+  @if ($j==1) {
+    justify-content: center;
+  }
+}
+// Working as an alias for flex-centered
+@mixin fc($a: 1, $b: 1) {
+  @include flex-centered($a, $b);
+}
